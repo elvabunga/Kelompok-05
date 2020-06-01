@@ -1,6 +1,3 @@
-print("=========================================================")
-print("PROGRAM HITUNG GAJI BULANAN KARYAWAN")
-print("=========================================================")
 
 listPekerja = []
 listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor',
