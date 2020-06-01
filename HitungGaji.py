@@ -9,9 +9,10 @@ PajakGajiPokok = 0.05 #dari gaji pokok
 DendaKeterlambatan = 25000
 lembur=25000
 lemburtglmrh=100000
+isinyadata=len(Jabatan)
 
 print('No.','\t','Jabatan','\t','Gaji Pokok','\t','Tunjangan')
-for i in range(3):
+for i in range(isinyadata):
     print(i+1,'\t',Jabatan[i],'\t',GajiPokok[i],'\t',Tunjangan[i])
 
 totalkaryawan= int(input('jumlah total karyawan dalam perusahaan : '))
