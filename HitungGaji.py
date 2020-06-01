@@ -136,6 +136,33 @@ def proses():
             data.append(gajibersih)
             #dtkaryawan[nama] = data
             listPekerja.append(data)
+        elif jbt == 5:
+            c = float(input('Banyak cuti : '))
+            l = int(input('Banyaknya jam lembur : '))
+            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+            t = int(input('Banyaknya jam keterlambatan : '))
+            if c <= 2:
+                gpk = GajiPokok[4]
+            else:
+                gpk = GajiPokok[4] - (c-2)*GajiPokok[4]/25
+            lemburan = l * lembur + merah * lemburtglmrh
+            gajikotor = gpk + Tunjangan[4] + lemburan
+            asuransi = 0.02 * gpk
+            pajak = PajakGajiPokok * gpk
+            telat = t * DendaKeterlambatan
+            potongan = telat + asuransi + pajak
+            gajibersih = gajikotor - potongan
+            data.append(gpk)
+            data.append(Tunjangan[4])
+            data.append(lemburan)
+            data.append(gajikotor)
+            data.append(asuransi)
+            data.append(pajak)
+            data.append(telat)
+            data.append(potongan)
+            data.append(gajibersih)
+            #dtkaryawan[nama] = data
+            listPekerja.append(data)
         else:
             print('data tidak terdeteksi')
     for gaji in listPekerja:
