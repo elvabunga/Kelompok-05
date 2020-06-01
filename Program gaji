@@ -3,7 +3,6 @@ import csv
 N = 25
 jabatan = ['General manager','karyawan','Office Boy']
 gajipokok = [250000,100000,50000]
-tunjangan = [1000000,400000,200000]
 pajakgm = 0.02 #dari gaji pokok
 pajakk = 0.01 #dari gaji pokok
 pajakob = 0.005 #dari gaji pokok
@@ -43,14 +42,13 @@ while iterasi == True:
         else:
             gpk = (N - (c-2))*gajipokok[0]
         lemburan = l * lembur + merah * lemburtglmrh
-        gajikotor = gpk + tunjangan[0] + lemburan
+        gajikotor = gpk + lemburan
         asuransi = 0.02 * gpk
         pajak = pajakgm * gpk
         telat = t * dendatelat
         potongan = telat + asuransi + pajak
         gajibersih = gajikotor - potongan
         data.append(gpk)
-        data.append(tunjangan[0])
         data.append(lemburan)
         data.append(gajikotor)
         data.append(asuransi)
@@ -70,14 +68,13 @@ while iterasi == True:
         else:
             gpk = (N - (c-2))*gajipokok[1]
         lemburan = l * lembur + merah * lemburtglmrh
-        gajikotor = gpk + tunjangan[1] + lemburan
+        gajikotor = gpk + lemburan
         asuransi = 0.02 * gpk
         pajak = pajakgm * gpk
         telat = t * dendatelat
         potongan = telat + asuransi + pajak
         gajibersih = gajikotor - potongan
         data.append(gpk)
-        data.append(tunjangan[1])
         data.append(lemburan)
         data.append(gajikotor)
         data.append(asuransi)
@@ -97,14 +94,13 @@ while iterasi == True:
         else:
             gpk = (N - (c-2))*gajipokok[2]
         lemburan = l * lembur + merah * lemburtglmrh
-        gajikotor = gpk + tunjangan[2] + lemburan
+        gajikotor = gpk + lemburan
         asuransi = 0.02 * gpk
         pajak = pajakgm * gpk
         telat = t * dendatelat
         potongan = telat + asuransi + pajak
         gajibersih = gajikotor - potongan
         data.append(gpk)
-        data.append(tunjangan[2])
         data.append(lemburan)
         data.append(gajikotor)
         data.append(asuransi)
