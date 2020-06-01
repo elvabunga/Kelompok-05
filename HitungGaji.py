@@ -3,7 +3,7 @@ print("PROGRAM HITUNG GAJI BULANAN KARYAWAN")
 print("=========================================================")
 
 ListPekerja = []
-listpekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Uang Lembur','Gaji Kotor',
+listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Uang Lembur','Gaji Kotor',
                  'Asuransi','Pajak','Telat','Potongan','Gaji Bersih'])
 Jabatan = ['Direktur','Manager','SPV','Staff','OB']
 GajiPokok = [7000000,5000000,3000000,20000000,1000000]
