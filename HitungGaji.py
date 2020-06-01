@@ -8,9 +8,7 @@ listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Uang Lembur
 Jabatan = ['Direktur','Manager','SPV','Staff','OB']
 GajiPokok = [7000000,5000000,3000000,20000000,1000000]
 Tunjangan = [3000000,2000000,1500000,1000000,500000]
-UpahLembur =  
-upahlemburtanggalmerah = 
-PajakGajiPokok = 0.05#dari gaji pokok
+PajakGajiPokok = 0.05 #dari gaji pokok
 DendaKeterlambatan = 25000
 
 print('No.','\t','Jabatan','\t','Gaji Pokok','\t','Tunjangan')
