@@ -4,7 +4,7 @@ listPekerja = []
 listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor',
                  'Asuransi','Pajak','Telat','Potongan','Gaji Bersih'])
 Jabatan = ['Direktur','Manager','SPV','Staff','OB']
-GajiPokok = [7000000,5000000,3000000,20000000,1000000]
+GajiPokok = [7000000,5000000,3000000,2000000,1000000]
 Tunjangan = [3000000,2000000,1500000,1000000,500000]
 PajakGajiPokok = 0.05 #dari gaji pokok
 DendaKeterlambatan = 25000
