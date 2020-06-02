@@ -1,9 +1,11 @@
 import csv
+from os import system
+import time
 
 listPekerja = []
 listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor',
                  'Asuransi','Pajak','Telat','Potongan','Gaji Bersih'])
-Jabatan = ['Direktur','Manager','SPV','Staff','OB']
+Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
 GajiPokok = [7000000,5000000,3000000,2000000,1000000]
 Tunjangan = [3000000,2000000,1500000,1000000,500000]
 PajakGajiPokok = 0.05 #dari gaji pokok
@@ -13,6 +15,8 @@ lemburtglmrh=100000
 isinyadata=len(Jabatan)
 
 def header():
+    print("===================INFORMASI JABATAN, GAJI POKOK, DAN TUNJANGAN===================")
+    print()
     print('No.','\t','Jabatan','\t','Gaji Pokok','\t','Tunjangan')
     for i in range(isinyadata):
         print(i+1,'\t',Jabatan[i],'\t',GajiPokok[i],'\t',Tunjangan[i])
@@ -161,24 +165,50 @@ def proses():
             listPekerja.append(data)
         else:
             print('data tidak terdeteksi')
+    system('cls')
     for gaji in listPekerja:
             print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],
                   '\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
 
+
+
+def nuliskeCSV():
+    with open('FinalGajiKaryawan.csv', 'w', newline='') as csvfile:
+       
+        fieldnames = ['NIP','Nama','Jabatan','Gaji Pokok', 'Tunjangan', 'Upah Lembur', 
+                      'Gaji Kotor', 'Asuransi', 'Pajak', 'Telat', 'Potongan', 'Gaji Bersih']
+    
+        thewriter = csv.DictWriter(csvfile, fieldnames = fieldnames)
+       
+        for gaji in listPekerja:
+            thewriter.writerow({'NIP':gaji[0],'Nama':gaji[1], 'Jabatan':gaji[2], 
+                                'Gaji Pokok':gaji[3], 'Tunjangan':gaji[4], 
+                                'Upah Lembur':gaji[5], 'Gaji Kotor':gaji[6], 
+                                'Asuransi':gaji[7], 'Pajak':gaji[8], 
+                                'Telat':gaji[9], 'Potongan':gaji[10], 
+                                'Gaji Bersih':gaji[11]})
+
+print("=======================================================================")
+print("                      PROGRAM PENGGAJIAN KARYAWAN")
+print("                              P.T.EXODUS")
+print("             Jl. Jalan Sama Kamu 2019 A telp : (0271)783193")
+print("=======================================================================")
+time.sleep(1)
+print()
+print("PLEASE WAIT.....")
+time.sleep(3)
+system('cls')
+
 header()
 proses()
-
-with open('FinalGajiKaryawan.csv', 'w', newline='') as csvfile:
-   
-    fieldnames = ['NIP','Nama','Jabatan','Gaji Pokok', 'Tunjangan', 'Upah Lembur', 
-                  'Gaji Kotor', 'Asuransi', 'Pajak', 'Telat', 'Potongan', 'Gaji Bersih']
-
-    thewriter = csv.DictWriter(csvfile, fieldnames = fieldnames)
-   
-    for gaji in listPekerja:
-        thewriter.writerow({'NIP':gaji[0],'Nama':gaji[1], 'Jabatan':gaji[2], 
-                            'Gaji Pokok':gaji[3], 'Tunjangan':gaji[4], 
-                            'Upah Lembur':gaji[5], 'Gaji Kotor':gaji[6], 
-                            'Asuransi':gaji[7], 'Pajak':gaji[8], 
-                            'Telat':gaji[9], 'Potongan':gaji[10], 
-                            'Gaji Bersih':gaji[11]})
+while True:
+    tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
+    if tanya =='y' or 'Y':
+        nuliskeCSV()
+        break
+    elif tanya =='n' or 'N':
+        print("TERIMAKASIH")
+        break
+    else:
+        print("INPUTAN TIDAK TERDETEKSI")
+        break
