@@ -172,7 +172,8 @@ def proses():
 
 
 def nuliskeCSV():
-    with open('FinalGajiKaryawan.csv', 'w', newline='') as csvfile:
+    namafile=input("Inputkan nama file (format : NAMAFILE.csv) : ")
+    with open(namafile, 'w', newline='') as csvfile:
        
         fieldnames = ['NIP','Nama','Jabatan','Gaji Pokok', 'Tunjangan', 'Upah Lembur', 
                       'Gaji Kotor', 'Asuransi', 'Pajak', 'Telat', 'Potongan', 'Gaji Bersih']
