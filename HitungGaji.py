@@ -174,7 +174,7 @@ def proses():
             print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],
                   '\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
 
-
+    print('Jumlah Karyawan : ', len(listPekerja)-1)
 
 def nuliskeCSV():
     namafile=input("Inputkan nama file (format : NAMAFILE.csv) : ")
