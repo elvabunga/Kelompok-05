@@ -21,9 +21,9 @@ def header():
         print(i+1,'\t',Jabatan[i],'\t',GajiPokok[i],'\t',Tunjangan[i])
 
 def proses():
-    totalkaryawan= int(input('jumlah total karyawan dalam perusahaan : '))
+    Iterasi = True
                          
-    for i in range (totalkaryawan):
+    while Iterasi == True :
         data = []
         #datanya = (data) 
         nama = input('Nama Karyawan : ')
@@ -164,6 +164,11 @@ def proses():
             listPekerja.append(data)
         else:
             print('data tidak terdeteksi')
+            
+        x = input('Ingin menambah data? (y/n) : ')
+        if x != 'y':
+            Iterasi = False
+        
     system('cls')
     for gaji in listPekerja:
             print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],
