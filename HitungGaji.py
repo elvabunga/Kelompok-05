@@ -1,3 +1,4 @@
+import csv
 
 listPekerja = []
 listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor',
@@ -166,7 +167,23 @@ def proses():
         else:
             print('data tidak terdeteksi')
     for gaji in listPekerja:
-            print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],'\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
+            print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],
+                  '\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
 
 header()
 proses()
+
+with open('FinalGajiKaryawan.csv', 'w', newline='') as csvfile:
+   
+    fieldnames = ['NIP','Nama','Jabatan','Gaji Pokok', 'Tunjangan', 'Upah Lembur', 
+                  'Gaji Kotor', 'Asuransi', 'Pajak', 'Telat', 'Potongan', 'Gaji Bersih']
+
+    thewriter = csv.DictWriter(csvfile, fieldnames = fieldnames)
+   
+    for gaji in listPekerja:
+        thewriter.writerow({'NIP':gaji[0],'Nama':gaji[1], 'Jabatan':gaji[2], 
+                            'Gaji Pokok':gaji[3], 'Tunjangan':gaji[4], 
+                            'Upah Lembur':gaji[5], 'Gaji Kotor':gaji[6], 
+                            'Asuransi':gaji[7], 'Pajak':gaji[8], 
+                            'Telat':gaji[9], 'Potongan':gaji[10], 
+                            'Gaji Bersih':gaji[11]})
