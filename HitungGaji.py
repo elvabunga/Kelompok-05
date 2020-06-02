@@ -54,7 +54,6 @@ def proses():
             data.append(telat)
             data.append(potongan)
             data.append(gajibersih)
-            #dtkaryawan[nama] = data
             listPekerja.append(data)
         elif jbt == 2:
             c = float(input('Banyak cuti : '))
@@ -81,7 +80,6 @@ def proses():
             data.append(telat)
             data.append(potongan)
             data.append(gajibersih)
-            #dtkaryawan[nama] = data
             listPekerja.append(data)
         elif jbt == 3:
             c = float(input('Banyak cuti : '))
@@ -108,7 +106,6 @@ def proses():
             data.append(telat)
             data.append(potongan)
             data.append(gajibersih)
-            #dtkaryawan[nama] = data
             listPekerja.append(data)
         elif jbt == 4:
             c = float(input('Banyak cuti : '))
@@ -135,7 +132,6 @@ def proses():
             data.append(telat)
             data.append(potongan)
             data.append(gajibersih)
-            #dtkaryawan[nama] = data
             listPekerja.append(data)
         elif jbt == 5:
             c = float(input('Banyak cuti : '))
@@ -162,7 +158,6 @@ def proses():
             data.append(telat)
             data.append(potongan)
             data.append(gajibersih)
-            #dtkaryawan[nama] = data
             listPekerja.append(data)
         else:
             print('data tidak terdeteksi')
