@@ -3,8 +3,7 @@ from os import system
 import time
 
 listPekerja = []
-listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor',
-                 'Asuransi','Pajak','Telat','Potongan','Gaji Bersih'])
+listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor','Asuransi','Pajak   ','Telat','Potongan','Gaji Bersih'])
 Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
 GajiPokok = [7000000,5000000,3000000,2000000,1000000]
 Tunjangan = [3000000,2000000,1500000,1000000,500000]
@@ -203,12 +202,21 @@ header()
 proses()
 while True:
     tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
-    if tanya =='y' or 'Y':
+    if tanya =='y':
         nuliskeCSV()
-        break
-    elif tanya =='n' or 'N':
+        print("BERHASIL !")
         print("TERIMAKASIH")
+        print()
+        print("MENUTUP PROGRAM.....")
+        time.sleep(2)
+        break
+    elif tanya =='n':
+        print("TERIMAKASIH")
+        print()
+        print("MENUTUP PROGRAM.....")
+        time.sleep(2)
         break
     else:
         print("INPUTAN TIDAK TERDETEKSI")
-        break
+        time.sleep(1)
+        system('cls')
