@@ -8,7 +8,7 @@ Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
 GajiPokok = [7000000,5000000,3000000,2000000,1000000]
 Tunjangan = [3000000,2000000,1500000,1000000,500000]
 PajakGajiPokok = 0.05 #dari gaji pokok
-DendaKeterlambatan = 25000
+DendaKeterlambatan = 2000
 lembur=25000
 lemburtglmrh=100000
 isinyadata=len(Jabatan)
@@ -34,9 +34,9 @@ def proses():
         data.append(Jabatan[jbt-1])
         if jbt == 1:
             c = float(input('Banyak cuti : '))
-            l = int(input('Banyaknya jam lembur : '))
+            l = float(input('Banyaknya jam lembur : '))
             merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = int(input('Banyaknya jam keterlambatan : '))
+            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[0]
             else:
@@ -60,9 +60,9 @@ def proses():
             listPekerja.append(data)
         elif jbt == 2:
             c = float(input('Banyak cuti : '))
-            l = int(input('Banyaknya jam lembur : '))
+            l = float(input('Banyaknya jam lembur : '))
             merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = int(input('Banyaknya jam keterlambatan : '))
+            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[1]
             else:
@@ -86,9 +86,9 @@ def proses():
             listPekerja.append(data)
         elif jbt == 3:
             c = float(input('Banyak cuti : '))
-            l = int(input('Banyaknya jam lembur : '))
+            l = float(input('Banyaknya jam lembur : '))
             merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = int(input('Banyaknya jam keterlambatan : '))
+            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[2]
             else:
@@ -112,9 +112,9 @@ def proses():
             listPekerja.append(data)
         elif jbt == 4:
             c = float(input('Banyak cuti : '))
-            l = int(input('Banyaknya jam lembur : '))
+            l = float(input('Banyaknya jam lembur : '))
             merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = int(input('Banyaknya jam keterlambatan : '))
+            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[3]
             else:
@@ -138,9 +138,9 @@ def proses():
             listPekerja.append(data)
         elif jbt == 5:
             c = float(input('Banyak cuti : '))
-            l = int(input('Banyaknya jam lembur : '))
+            l = float(input('Banyaknya jam lembur : '))
             merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = int(input('Banyaknya jam keterlambatan : '))
+            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[4]
             else:
