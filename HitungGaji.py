@@ -43,18 +43,21 @@ def proses():
                 lembur1 = l * lembur
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
                 lembur2 = merah * lemburtglmrh
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 t = int(input('Banyaknya menit keterlambatan : '))
                 telat = t * DendaKeterlambatan
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[0] + lemburan
@@ -83,18 +86,21 @@ def proses():
                 lembur1 =l * lembur
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
                 lembur2 = merah * lemburtglmrh
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 t = int(input('Banyaknya menit keterlambatan : '))
                 telat = t * DendaKeterlambatan
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[1] + lemburan
@@ -123,18 +129,21 @@ def proses():
                 lembur1 =l * lembur
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
                 lembur2 = merah * lemburtglmrh
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 t = int(input('Banyaknya menit keterlambatan : '))
                 telat = t * DendaKeterlambatan
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[2] + lemburan
@@ -163,18 +172,21 @@ def proses():
                 lembur1 =l * lembur
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
                 lembur2 = merah * lemburtglmrh
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 t = int(input('Banyaknya menit keterlambatan : '))
                 telat = t * DendaKeterlambatan
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[3] + lemburan
@@ -203,18 +215,21 @@ def proses():
                 lembur1 = l * lembur
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
                 lembur2 = merah * lemburtglmrh
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             try:
                 t = int(input('Banyaknya menit keterlambatan : '))
                 telat = t * DendaKeterlambatan
             except ValueError as ve:
                 print(ve)
+                time.sleep(1)
                 break
             lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[4] + lemburan
