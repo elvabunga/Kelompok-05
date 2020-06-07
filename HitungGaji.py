@@ -32,20 +32,34 @@ def proses():
         data.append(NIP)
         data.append(nama)
         data.append(Jabatan[jbt-1])
-        if jbt == 1:
+                if jbt == 1:
             c = float(input('Banyak cuti : '))
-            l = float(input('Banyaknya jam lembur : '))
-            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[0]
             else:
                 gpk = GajiPokok[0] - (c-2)*GajiPokok[0]/25
-            lemburan = l * lembur + merah * lemburtglmrh
+            try:
+                l = int(input('Banyaknya jam lembur : '))
+                lembur1 = l * lembur
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                lembur2 = merah * lemburtglmrh
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                t = int(input('Banyaknya menit keterlambatan : '))
+                telat = t * DendaKeterlambatan
+            except ValueError as ve:
+                print(ve)
+                break
+            lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[0] + lemburan
             asuransi = 0.02 * gpk
             pajak = PajakGajiPokok * gpk
-            telat = t * DendaKeterlambatan
             potongan = telat + asuransi + pajak
             gajibersih = gajikotor - potongan
             data.append(gpk)
@@ -60,18 +74,32 @@ def proses():
             listPekerja.append(data)
         elif jbt == 2:
             c = float(input('Banyak cuti : '))
-            l = float(input('Banyaknya jam lembur : '))
-            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[1]
             else:
                 gpk = GajiPokok[1] - (c-2)*GajiPokok[1]/25
-            lemburan = l * lembur + merah * lemburtglmrh
+            try:
+                l = int(input('Banyaknya jam lembur : '))
+                lembur1 =l * lembur
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                lembur2 = merah * lemburtglmrh
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                t = int(input('Banyaknya menit keterlambatan : '))
+                telat = t * DendaKeterlambatan
+            except ValueError as ve:
+                print(ve)
+                break
+            lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[1] + lemburan
             asuransi = 0.02 * gpk
             pajak = PajakGajiPokok * gpk
-            telat = t * DendaKeterlambatan
             potongan = telat + asuransi + pajak
             gajibersih = gajikotor - potongan
             data.append(gpk)
@@ -86,18 +114,32 @@ def proses():
             listPekerja.append(data)
         elif jbt == 3:
             c = float(input('Banyak cuti : '))
-            l = float(input('Banyaknya jam lembur : '))
-            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[2]
             else:
                 gpk = GajiPokok[2] - (c-2)*GajiPokok[2]/25
-            lemburan = l * lembur + merah * lemburtglmrh
+            try:
+                l = int(input('Banyaknya jam lembur : '))
+                lembur1 =l * lembur
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                lembur2 = merah * lemburtglmrh
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                t = int(input('Banyaknya menit keterlambatan : '))
+                telat = t * DendaKeterlambatan
+            except ValueError as ve:
+                print(ve)
+                break
+            lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[2] + lemburan
             asuransi = 0.02 * gpk
             pajak = PajakGajiPokok * gpk
-            telat = t * DendaKeterlambatan
             potongan = telat + asuransi + pajak
             gajibersih = gajikotor - potongan
             data.append(gpk)
@@ -112,18 +154,32 @@ def proses():
             listPekerja.append(data)
         elif jbt == 4:
             c = float(input('Banyak cuti : '))
-            l = float(input('Banyaknya jam lembur : '))
-            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[3]
             else:
                 gpk = GajiPokok[3] - (c-2)*GajiPokok[3]/25
-            lemburan = l * lembur + merah * lemburtglmrh
+            try:
+                l = int(input('Banyaknya jam lembur : '))
+                lembur1 =l * lembur
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                lembur2 = merah * lemburtglmrh
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                t = int(input('Banyaknya menit keterlambatan : '))
+                telat = t * DendaKeterlambatan
+            except ValueError as ve:
+                print(ve)
+                break
+            lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[3] + lemburan
             asuransi = 0.02 * gpk
             pajak = PajakGajiPokok * gpk
-            telat = t * DendaKeterlambatan
             potongan = telat + asuransi + pajak
             gajibersih = gajikotor - potongan
             data.append(gpk)
@@ -138,18 +194,32 @@ def proses():
             listPekerja.append(data)
         elif jbt == 5:
             c = float(input('Banyak cuti : '))
-            l = float(input('Banyaknya jam lembur : '))
-            merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-            t = float(input('Banyaknya menit keterlambatan : '))
             if c <= 2:
                 gpk = GajiPokok[4]
             else:
-                gpk = GajiPokok[4] - (c-2)*GajiPokok[4]/25
-            lemburan = l * lembur + merah * lemburtglmrh
+                gpk = GajiPokok[4] - (c-2)*GajiPokok[4]/25          
+            try:
+                l = int(input('Banyaknya jam lembur : '))
+                lembur1 = l * lembur
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                lembur2 = merah * lemburtglmrh
+            except ValueError as ve:
+                print(ve)
+                break
+            try:
+                t = int(input('Banyaknya menit keterlambatan : '))
+                telat = t * DendaKeterlambatan
+            except ValueError as ve:
+                print(ve)
+                break
+            lemburan =  lembur1 + lembur2
             gajikotor = gpk + Tunjangan[4] + lemburan
             asuransi = 0.02 * gpk
             pajak = PajakGajiPokok * gpk
-            telat = t * DendaKeterlambatan
             potongan = telat + asuransi + pajak
             gajibersih = gajikotor - potongan
             data.append(gpk)
