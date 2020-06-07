@@ -32,7 +32,7 @@ def proses():
         data.append(NIP)
         data.append(nama)
         data.append(Jabatan[jbt-1])
-                if jbt == 1:
+        if jbt == 1:
             c = float(input('Banyak cuti : '))
             if c <= 2:
                 gpk = GajiPokok[0]
