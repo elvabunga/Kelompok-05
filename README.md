@@ -14,3 +14,21 @@ Tugas Besar Program Komputer Kelas A kelompok 5
   Program ini dibuat untuk memudahkan dalam melakukan perhitungan terhadap berapa total gaji yang di terima oleh masing-masing karyawan. Di mana terdapat lima golongan karyawan yaitu Direktur, Manager, Supervisor, Staff, dan Janitor. Dari kelima golongan karyawan/jabatan tersebut, gaji yang didapat dispesifikkan lagi sesuai dengan jabatannya masing masing. Setiap karyawan akan mendapatkan gaji dengan kalkulasi antara gaji pokok, pajak dari gaji pokok, gaji bersih, tunjangan, asuransi, total jam lembur, total cuti karyawan, serta denda keterlambatan saat masuk kantor.
 
   Dari Program Penggajian Karyawan yang telah kami buat, akan mendata gaji yang akan didapat oleh masing-masing karyawan yang bekerja. Outputnya bisa berbentuk data yang di export ke file CSV jika menginginkan untuk di simpan di CSV.
+  
+## Repository
+<pre>
+File "Diagram Alir Program Perhitungan Gaji Karyawan"
+  Merupakan flowchart yang menjelaskan tentang cara kerja program secara diagram alir.
+
+File "Hitung Gaji"
+  Merupakan file untuk menjalankan program.
+  
+File "Laporan Program Penggajian Karyawan"
+  Merupakan laporan Tugas Mata Kuliah Progama Komputer
+  
+File "Penggunaan Program Penghitung Gaji"
+  Merupakan file yang berisi tentang tata cara atau langkah-langkah dalam menggunakan program.
+
+File "README"
+  Berisi penjelasan singkat dari Program Penggajian Karyawan serta Repository.
+
