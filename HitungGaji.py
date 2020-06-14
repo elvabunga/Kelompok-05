@@ -5,12 +5,12 @@ import time
 listPekerja = []
 listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor','Asuransi','Pajak   ','Telat','Potongan','Gaji Bersih'])
 Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
-GajiPokok = [7000000,5000000,3000000,2000000,1000000]
-Tunjangan = [3000000,2000000,1500000,1000000,500000]
-PajakGajiPokok = 0.05 #dari gaji pokok
-DendaKeterlambatan = 2000
-lembur=25000
-lemburtglmrh=100000
+GajiPokok = []
+Tunjangan = []
+PajakGajiPokok = 0 #dari gaji pokok
+DendaKeterlambatan = 0
+lembur=0
+lemburtglmrh=0
 isinyadata=len(Jabatan)
 
 def header():
@@ -278,6 +278,29 @@ def nuliskeCSV():
                                 'Telat':gaji[9], 'Potongan':gaji[10], 
                                 'Gaji Bersih':gaji[11]})
 
+def pertanyaanawal():
+    print("===================PERTANYAAN PENDAHULUAN===================")
+    gajidirektur=int(input("Masukkan gaji pokok direktur dalam rupiah : "))
+    GajiPokok.append(gajidirektur)
+    gajimanager=int(input("Masukkan gaji pokok manager dalam rupiah : "))
+    GajiPokok.append(gajimanager)
+    gajispv=int(input("Masukkan gaji pokok supervisor dalam rupiah : "))
+    GajiPokok.append(gajispv)
+    gajistaff=int(input("Masukkan gaji pokok staff dalam rupiah : "))
+    GajiPokok.append(gajistaff)
+    gajijanitor=int(input("Masukkan gaji pokok janitor dalam rupiah : "))
+    GajiPokok.append(gajijanitor)
+    tunjdirektur=int(input("Masukkan tunjangan direktur dalam rupiah : "))
+    Tunjangan.append(tunjdirektur)
+    tunjmanager=int(input("Masukkan tunjangan manager dalam rupiah : "))
+    Tunjangan.append(tunjmanager)
+    tunjspv=int(input("Masukkan tunjangan supervisor dalam rupiah : "))
+    Tunjangan.append(tunjspv)
+    tunjstaff=int(input("Masukkan tunjangan staff dalam rupiah : "))
+    Tunjangan.append(tunjstaff)
+    tunjjanitor=int(input("Masukkan tunjangan janitor dalam rupiah : "))
+    Tunjangan.append(tunjjanitor)
+    
 print("=======================================================================")
 print("                      PROGRAM PENGGAJIAN KARYAWAN")
 print("                              P.T.EXODUS")
@@ -289,6 +312,13 @@ print("PLEASE WAIT.....")
 time.sleep(3)
 system('cls')
 
+
+pertanyaanawal()
+PajakGajiPokok=float(input('Masukkan pajak terhadap gaji pokok dalam desimal : '))
+DendaKeterlambatan=int(input('Masukkan denda keterlambatan per menit dalam rupiah : '))
+lembur=int(input('Masukkan upah lembur tiap jam dalam rupiah : '))
+lemburtglmrh=int(input('Masukkan upah lembur tanggal merah tiap hari dalam rupiah : '))
+system('cls')
 header()
 proses()
 while True:
