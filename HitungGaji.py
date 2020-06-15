@@ -278,46 +278,134 @@ def nuliskeCSV():
                                 'Telat':gaji[9], 'Potongan':gaji[10], 
                                 'Gaji Bersih':gaji[11]})
 
-def pertanyaanawal():
-    print("===================PERTANYAAN PENDAHULUAN===================")
-    gajidirektur=int(input("Masukkan gaji pokok direktur dalam rupiah : "))
-    GajiPokok.append(gajidirektur)
-    gajimanager=int(input("Masukkan gaji pokok manager dalam rupiah : "))
-    GajiPokok.append(gajimanager)
-    gajispv=int(input("Masukkan gaji pokok supervisor dalam rupiah : "))
-    GajiPokok.append(gajispv)
-    gajistaff=int(input("Masukkan gaji pokok staff dalam rupiah : "))
-    GajiPokok.append(gajistaff)
-    gajijanitor=int(input("Masukkan gaji pokok janitor dalam rupiah : "))
-    GajiPokok.append(gajijanitor)
-    tunjdirektur=int(input("Masukkan tunjangan direktur dalam rupiah : "))
-    Tunjangan.append(tunjdirektur)
-    tunjmanager=int(input("Masukkan tunjangan manager dalam rupiah : "))
-    Tunjangan.append(tunjmanager)
-    tunjspv=int(input("Masukkan tunjangan supervisor dalam rupiah : "))
-    Tunjangan.append(tunjspv)
-    tunjstaff=int(input("Masukkan tunjangan staff dalam rupiah : "))
-    Tunjangan.append(tunjstaff)
-    tunjjanitor=int(input("Masukkan tunjangan janitor dalam rupiah : "))
-    Tunjangan.append(tunjjanitor)
-    
-print("=======================================================================")
-print("                      PROGRAM PENGGAJIAN KARYAWAN")
-print("                              P.T.EXODUS")
-print("             Jl. Jalan Sama Kamu 2019 A telp : (0271)783193")
-print("=======================================================================")
-time.sleep(1)
-print()
-print("PLEASE WAIT.....")
-time.sleep(3)
-system('cls')
+print("===================PERTANYAAN PENDAHULUAN===================")
+print('List jabatan')
+for i in range(len(Jabatan)):
+    print(i+1, Jabatan[i])
 
-
-pertanyaanawal()
-PajakGajiPokok=float(input('Masukkan pajak terhadap gaji pokok dalam desimal : '))
-DendaKeterlambatan=int(input('Masukkan denda keterlambatan per menit dalam rupiah : '))
-lembur=int(input('Masukkan upah lembur tiap jam dalam rupiah : '))
-lemburtglmrh=int(input('Masukkan upah lembur tanggal merah tiap hari dalam rupiah : '))
+try:
+    gajipokok1 = int(input('Input gaji pokok bulanan Direktur : '))
+    GajiPokok.append(gajipokok1)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    gajipokok2 = int(input('Input gaji pokok bulanan Manager : '))
+    GajiPokok.append(gajipokok2)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    gajipokok3 = int(input('Input gaji pokok bulanan Supervisor : '))
+    GajiPokok.append(gajipokok3)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    gajipokok4 = int(input('Input gaji pokok bulanan Staff : '))
+    GajiPokok.append(gajipokok4)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    gajipokok5 = int(input('Input gaji pokok bulanan Janitor : '))
+    GajiPokok.append(gajipokok5)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    tunjangan1 = int(input('Input Tunjangan Direktur : '))
+    GajiPokok.append(tunjangan1)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    tunjangan2 = int(input('Input Tunjangan Manager : '))
+    GajiPokok.append(tunjangan2)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    tunjangan3 = int(input('Input Tunjangan Supervisor : '))
+    GajiPokok.append(tunjangan3)
+except ValueError  as ve:
+    print(ValueError)
+    time.sleep(2)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    tunjangan4 = int(input('Input Tunjangan Staff : '))
+    GajiPokok.append(tunjangan4)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    tunjangan5 = int(input('Input Tunjangan Janitor : '))
+    GajiPokok.append(tunjangan5)
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    PajakGajiPokok = float(input('inputkan pajak yang harus dibayar oleh setiap karyawan (dalam desimal kurang dari 1) : ')) #dari gaji pokok
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    DendaKeterlambatan = int(input('Inputkan denda keterlambatan yang harus dibayar oleh karyawan setiap keterlambatan 1 menit : '))
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    lembur = int(input('Input gaji lembur yang diterima karyawan per jamnya : '))
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
+try:
+    lemburtglmrh = int(input('Input gaji yang diterima karyawan setiap bekerja di tanggal metah : '))
+except ValueError as ve:
+    print(ValueError)
+    exit()
+except TypeError as te:
+    print(TypeError)
+    exit()
 system('cls')
 header()
 proses()
