@@ -278,6 +278,17 @@ def nuliskeCSV():
                                 'Telat':gaji[9], 'Potongan':gaji[10], 
                                 'Gaji Bersih':gaji[11]})
 
+print("=======================================================================")
+print("                      PROGRAM PENGGAJIAN KARYAWAN")
+print("                              P.T.EXODUS")
+print("             Jl. Jalan Sama Kamu 2019 A telp : (0271)783193")
+print("=======================================================================")
+time.sleep(1)
+print()
+print("PLEASE WAIT.....")
+time.sleep(3)
+system('cls')
+
 print("===================PERTANYAAN PENDAHULUAN===================")
 print('List jabatan')
 for i in range(len(Jabatan)):
@@ -330,7 +341,7 @@ except TypeError as te:
     exit()
 try:
     tunjangan1 = int(input('Input Tunjangan Direktur : '))
-    GajiPokok.append(tunjangan1)
+    Tunjangan.append(tunjangan1)
 except ValueError as ve:
     print(ValueError)
     exit()
@@ -339,7 +350,7 @@ except TypeError as te:
     exit()
 try:
     tunjangan2 = int(input('Input Tunjangan Manager : '))
-    GajiPokok.append(tunjangan2)
+    Tunjangan.append(tunjangan2)
 except ValueError as ve:
     print(ValueError)
     exit()
@@ -348,7 +359,7 @@ except TypeError as te:
     exit()
 try:
     tunjangan3 = int(input('Input Tunjangan Supervisor : '))
-    GajiPokok.append(tunjangan3)
+    Tunjangan.append(tunjangan3)
 except ValueError  as ve:
     print(ValueError)
     time.sleep(2)
@@ -358,7 +369,7 @@ except TypeError as te:
     exit()
 try:
     tunjangan4 = int(input('Input Tunjangan Staff : '))
-    GajiPokok.append(tunjangan4)
+    Tunjangan.append(tunjangan4)
 except ValueError as ve:
     print(ValueError)
     exit()
@@ -367,7 +378,7 @@ except TypeError as te:
     exit()
 try:
     tunjangan5 = int(input('Input Tunjangan Janitor : '))
-    GajiPokok.append(tunjangan5)
+    Tunjangan.append(tunjangan5)
 except ValueError as ve:
     print(ValueError)
     exit()
@@ -399,13 +410,14 @@ except TypeError as te:
     print(TypeError)
     exit()
 try:
-    lemburtglmrh = int(input('Input gaji yang diterima karyawan setiap bekerja di tanggal metah : '))
+    lemburtglmrh = int(input('Input gaji yang diterima karyawan setiap bekerja di tanggal merah : '))
 except ValueError as ve:
     print(ValueError)
     exit()
 except TypeError as te:
     print(TypeError)
     exit()
+
 system('cls')
 header()
 proses()
