@@ -21,8 +21,8 @@ while True:
     try:
         a = int(input('Pilih menu yang akan digunakan (q untuk keluar): '))
         system('cls')
-    except TypeError as te:
-        print(te)
+    except ValueError as ve:
+        print(ve)
         print('Inputkan angka pada menu yang ingin digunakan')
         exit()
     if a == 1: 
