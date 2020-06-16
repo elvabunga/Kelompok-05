@@ -402,7 +402,7 @@ if a == 1:
         print(TypeError)
         exit()
     try:
-        PajakGajiPokok = float(input('inputkan pajak yang harus dibayar oleh setiap karyawan (dalam desimal kurang dari 1) : ')) #dari gaji pokok
+        PajakGajiPokok = float(input('Inputkan pajak yang harus dibayar oleh setiap karyawan (dalam desimal kurang dari 1) : ')) #dari gaji pokok
     except ValueError as ve:
         print(ValueError)
         exit()
