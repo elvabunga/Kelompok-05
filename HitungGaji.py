@@ -471,4 +471,4 @@ elif a == 2:
         exit()
 
 else:
-    print('Menu tudak tersedia')
+    print('Menu tidak tersedia')
