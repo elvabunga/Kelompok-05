@@ -458,13 +458,17 @@ if a == 1:
             time.sleep(1)
             system('cls')
 elif a == 2:
-    filename = input('Inputkan nama data dengan format NamaFile.csv : ')
-    ListPekerja = []
-    with open(filename,'r') as csvfile:
-        readCSV = csv.reader(csvfile, delimiter = ',')
-        for karyawan in readCSV:
-            ListPekerja.append(karyawan)
-        print(ListPekerja)
+    try:
+        filename = input('Inputkan nama data dengan format NamaFile.csv : ')
+        ListPekerja = []
+        with open(filename,'r') as csvfile:
+            readCSV = csv.reader(csvfile, delimiter = ',')
+            for karyawan in readCSV:
+                ListPekerja.append(karyawan)
+            print(ListPekerja)
+    except Exception as e:
+        print('Sepertinya anda salah memasukkan format nama file')
+        exit()
 
 else:
     print('Menu tudak tersedia')
