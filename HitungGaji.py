@@ -1,9 +1,15 @@
 import csv
 from os import system
 import time
-print('---------------------------------------------------------------')
-print('                   Gaji Karyawan P.T. Exodus')
-print('---------------------------------------------------------------')
+print("=======================================================================")
+print("                      PROGRAM PENGGAJIAN KARYAWAN")
+print("                              P.T.EXODUS")
+print("             Jl. Jalan Sama Kamu 2019 A telp : (0271)783193")
+print("=======================================================================")
+time.sleep(1)
+print()
+print("PLEASE WAIT.....")
+time.sleep(3)
 
 print()
 print('Menu : ')
@@ -13,6 +19,7 @@ print()
 
 try:
     a = int(input('Pilih menu yang akan digunakan: '))
+    system('cls')
 except TypeError as te:
     print(te)
     print('Inputkan angka pada menu yang ingin digunakan')
@@ -294,16 +301,7 @@ if a == 1:
                                     'Telat':gaji[9], 'Potongan':gaji[10], 
                                     'Gaji Bersih':gaji[11]})
 
-    print("=======================================================================")
-    print("                      PROGRAM PENGGAJIAN KARYAWAN")
-    print("                              P.T.EXODUS")
-    print("             Jl. Jalan Sama Kamu 2019 A telp : (0271)783193")
-    print("=======================================================================")
-    time.sleep(1)
-    print()
-    print("PLEASE WAIT.....")
-    time.sleep(3)
-    system('cls')
+    
 
     print("===================PERTANYAAN PENDAHULUAN===================")
     print('List jabatan')
@@ -458,6 +456,7 @@ if a == 1:
             time.sleep(1)
             system('cls')
 elif a == 2:
+    print('==================PEMBUKAAN DATA GAJI==================')
     try:
         filename = input('Inputkan nama data dengan format NamaFile.csv : ')
         ListPekerja = []
@@ -465,10 +464,15 @@ elif a == 2:
             readCSV = csv.reader(csvfile, delimiter = ',')
             for karyawan in readCSV:
                 ListPekerja.append(karyawan)
-            print(ListPekerja)
+                print(karyawan[0],'\t',karyawan[1],'\t',karyawan[2],'\t',karyawan[3],'\t',karyawan[4],'\t',karyawan[5],
+                      '\t',karyawan[6],'\t',karyawan[7],'\t',karyawan[8],'\t',karyawan[9],'\t',karyawan[10],'\t',karyawan[11])
+            time.sleep(10)
     except Exception as e:
         print('Sepertinya anda salah memasukkan format nama file')
+        time.sleep(1)
         exit()
 
 else:
-    print('Menu tidak tersedia')
+    print('Menu tudak tersedia')
+    time.sleep(1)
+    
