@@ -479,4 +479,4 @@ while True:
     
     else:
         print('Menu tudak tersedia')
-        
+        break
