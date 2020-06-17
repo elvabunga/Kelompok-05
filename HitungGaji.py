@@ -15,8 +15,8 @@ print()
 while True:
     print('Menu : ')
     print('1. Update Standar Gaji Karyawan')
-    print('2. Menghitung gaji karyawan')
-    print('3. Menampilkan data gaji karyawan')
+    print('2. Menghitung Gaji Karyawan')
+    print('3. Menampilkan Data Gaji Karyawan')
     print('4. Quit')
     print()
     
