@@ -622,14 +622,14 @@ while True:
                         gpk = GajiPokokU[4] - (c-2)*GajiPokokU[4]/25          
                     try:
                         l = int(input('Banyaknya jam lembur : '))
-                        lembur1 = l * lembur
+                        lembur1 = l * lemburU
                     except ValueError as ve:
                         print(ve)
                         time.sleep(1)
                         break
                     try:
                         merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
-                        lembur2 = merah * lemburtglmrh
+                        lembur2 = merah * lemburtglmrhU
                     except ValueError as ve:
                         print(ve)
                         time.sleep(1)
