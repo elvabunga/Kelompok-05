@@ -696,7 +696,7 @@ while True:
 
         system('cls')
         print('==================PENGHITUNGAN GAJI KARYAWAN==================')
-        d = input('apakah anda telah mengupdate standar penggajian?(y/n)')
+        d = input('apakah anda telah mengupdate standar penggajian?(y/n) : ')
         if d == 'y':
             b = input('apakah anda ingin menggunakan standar penggajian yang sudah di update?(y/n) : ')
             if b == 'y':
