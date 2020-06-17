@@ -175,7 +175,6 @@ while True:
             exit()
     
     elif a == 2:
-        b = input('apakah anda ingin menggunakan standar penggajian yang sudah di update?(y/n) : ')
         def header():
             print("===================INFORMASI JABATAN, GAJI POKOK, DAN TUNJANGAN===================")
             print()
@@ -691,30 +690,58 @@ while True:
         
 
         system('cls')
-        if b == 'y':
-            headerU()
-            prosesU()
-            while True:
-                tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
-                if tanya =='y':
-                    nuliskeCSV()
-                    print("BERHASIL !")
-                    print("TERIMAKASIH")
-                    print()
-                    print("KEMBALI KE MENU AWAL.....")
-                    time.sleep(2)
-                    break
-                elif tanya =='n':
-                    print("TERIMAKASIH")
-                    print()
-                    print("KEMBALI KE MENU AWAL.....")
-                    time.sleep(2)
-                    break
-                else:
-                    print("INPUTAN TIDAK TERDETEKSI")
-                    time.sleep(1)
-                    system('cls')
-        elif b == 'n':
+        d = input('apakah anda telah mengupdate standar penggajian?(y/n)')
+        if d == 'y':
+            b = input('apakah anda ingin menggunakan standar penggajian yang sudah di update?(y/n) : ')
+            if b == 'y':
+                headerU()
+                prosesU()
+                while True:
+                    tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
+                    if tanya =='y':
+                        nuliskeCSV()
+                        print("BERHASIL !")
+                        print("TERIMAKASIH")
+                        print()
+                        print("KEMBALI KE MENU AWAL.....")
+                        time.sleep(2)
+                        break
+                    elif tanya =='n':
+                        print("TERIMAKASIH")
+                        print()
+                        print("KEMBALI KE MENU AWAL.....")
+                        time.sleep(2)
+                        break
+                    else:
+                        print("INPUTAN TIDAK TERDETEKSI")
+                        time.sleep(1)
+                        system('cls')
+            elif b == 'n':
+                header()
+                proses()
+                while True:
+                    tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
+                    if tanya =='y':
+                        nuliskeCSV()
+                        print("BERHASIL !")
+                        print("TERIMAKASIH")
+                        print()
+                        print("KEMBALI KE MENU AWAL.....")
+                        time.sleep(2)
+                        break
+                    elif tanya =='n':
+                        print("TERIMAKASIH")
+                        print()
+                        print("KEMBALI KE MENU AWAL.....")
+                        time.sleep(2)
+                        break
+                    else:
+                        print("INPUTAN TIDAK TERDETEKSI")
+                        time.sleep(1)
+                        system('cls')
+            else:
+                print('Inputan tidak terdeteksi')
+        elif d == 'n':
             header()
             proses()
             while True:
@@ -738,7 +765,7 @@ while True:
                     time.sleep(1)
                     system('cls')
         else:
-            print('Inputan tidak terdeteksi')
+           print('Inputan tidak terdeteksi')  
             
     elif a == 3:
         print('==================PEMBUKAAN DATA GAJI==================')
