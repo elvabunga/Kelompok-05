@@ -14,35 +14,180 @@ time.sleep(3)
 print()
 while True:
     print('Menu : ')
-    print('1. Menghitung gaji karyawan')
-    print('2. Menampilkan data gaji karyawan')
+    print('1. Update Standar Gaji Karyawan')
+    print('2. Menghitung gaji karyawan')
+    print('3. Menampilkan data gaji karyawan')
+    print('4. Quit')
     print()
     
     try:
-        a = int(input('Pilih menu yang akan digunakan (q untuk keluar): '))
+        a = int(input('Pilih menu yang akan digunakan : '))
         system('cls')
     except ValueError as ve:
         print(ve)
         print('Inputkan angka pada menu yang ingin digunakan')
         exit()
+    
+    listPekerja = []
+    listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor','Asuransi','Pajak   ','Telat','Potongan','Gaji Bersih'])
+    Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
+    GajiPokok = [7000000,5000000,3000000,2000000,1000000]
+    Tunjangan = [3000000,2000000,1500000,1000000,500000]
+    PajakGajiPokok = 0.1 #dari gaji pokok
+    DendaKeterlambatan = 2000
+    lembur= 50000
+    lemburtglmrh= 300000
+    isinyadata=len(Jabatan)
+        
     if a == 1: 
-        listPekerja = []
+        print("===================PERTANYAAN PENDAHULUAN===================")
+        print('List jabatan')
+        for i in range(len(Jabatan)):
+            print(i+1, Jabatan[i])
         listPekerja.append(['NIP','Nama','Jabatan','Gaji Pokok','Tunjangan','Upah Lembur','Gaji Kotor','Asuransi','Pajak   ','Telat','Potongan','Gaji Bersih'])
         Jabatan = ['Direktur','Manager','Supervisor','Staff ','Janitor']
-        GajiPokok = []
-        Tunjangan = []
-        PajakGajiPokok = 0 #dari gaji pokok
-        DendaKeterlambatan = 0
-        lembur=0
-        lemburtglmrh=0
+        GajiPokokU = []
+        TunjanganU = []
+
         isinyadata=len(Jabatan)
+        try:
+            gajipokok1 = int(input('Input gaji pokok bulanan Direktur : '))
+            GajiPokokU.append(gajipokok1)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            gajipokok2 = int(input('Input gaji pokok bulanan Manager : '))
+            GajiPokokU.append(gajipokok2)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            gajipokok3 = int(input('Input gaji pokok bulanan Supervisor : '))
+            GajiPokokU.append(gajipokok3)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            gajipokok4 = int(input('Input gaji pokok bulanan Staff : '))
+            GajiPokokU.append(gajipokok4)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            gajipokok5 = int(input('Input gaji pokok bulanan Janitor : '))
+            GajiPokokU.append(gajipokok5)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            tunjangan1 = int(input('Input Tunjangan Direktur : '))
+            TunjanganU.append(tunjangan1)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            tunjangan2 = int(input('Input Tunjangan Manager : '))
+            TunjanganU.append(tunjangan2)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            tunjangan3 = int(input('Input Tunjangan Supervisor : '))
+            TunjanganU.append(tunjangan3)
+        except ValueError  as ve:
+            print(ValueError)
+            time.sleep(2)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            tunjangan4 = int(input('Input Tunjangan Staff : '))
+            TunjanganU.append(tunjangan4)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            tunjangan5 = int(input('Input Tunjangan Janitor : '))
+            TunjanganU.append(tunjangan5)
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            PajakGajiPokokU = float(input('Inputkan pajak yang harus dibayar oleh setiap karyawan (dalam desimal kurang dari 1) : ')) #dari gaji pokok
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            DendaKeterlambatanU = int(input('Inputkan denda keterlambatan yang harus dibayar oleh karyawan setiap keterlambatan 1 menit : '))
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            lemburU = int(input('Input gaji lembur yang diterima karyawan per jamnya : '))
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
+        try:
+            lemburtglmrhU = int(input('Input gaji yang diterima karyawan setiap bekerja di tanggal merah : '))
+        except ValueError as ve:
+            print(ValueError)
+            exit()
+        except TypeError as te:
+            print(TypeError)
+            exit()
     
+    elif a == 2:
+        b = input('apakah anda ingin menggunakan standar penggajian yang sudah di update?(y/n) : ')
         def header():
             print("===================INFORMASI JABATAN, GAJI POKOK, DAN TUNJANGAN===================")
             print()
             print('No.','\t','Jabatan','\t','Gaji Pokok','\t','Tunjangan')
             for i in range(isinyadata):
                 print(i+1,'\t',Jabatan[i],'\t',GajiPokok[i],'\t',Tunjangan[i])
+        def headerU():
+            print("===================INFORMASI JABATAN, GAJI POKOK, DAN TUNJANGAN===================")
+            print()
+            print('No.','\t','Jabatan','\t','Gaji Pokok','\t','Tunjangan')
+            for i in range(isinyadata):
+                print(i+1,'\t',Jabatan[i],'\t',GajiPokokU[i],'\t',TunjanganU[i])
     
         def proses():
             Iterasi = True
@@ -284,6 +429,247 @@ while True:
                           '\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
     
             print('Jumlah Karyawan : ', len(listPekerja)-1)
+            
+        def prosesU():
+            Iterasi = True
+    
+            while Iterasi == True :
+                data = []
+                #datanya = (data) 
+                nama = input('Nama Karyawan : ')
+                NIP = input('Nomor Induk Pegawai : ')
+                jbt = int(input('Nomor Jabatan : '))
+                data.append(NIP)
+                data.append(nama)
+                data.append(Jabatan[jbt-1])
+                if jbt == 1:
+                    c = float(input('Banyak cuti : '))
+                    if c <= 2:
+                        gpk = GajiPokokU[0]
+                    else:
+                        gpk = GajiPokokU[0] - (c-2)*GajiPokokU[0]/25
+                    try:
+                        l = int(input('Banyaknya jam lembur : '))
+                        lembur1 = l * lemburU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                        lembur2 = merah * lemburtglmrhU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        t = int(input('Banyaknya menit keterlambatan : '))
+                        telat = t * DendaKeterlambatanU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    lemburan =  lembur1 + lembur2
+                    gajikotor = gpk + TunjanganU[0] + lemburan
+                    asuransi = 0.02 * gpk
+                    pajak = PajakGajiPokokU * gpk
+                    potongan = telat + asuransi + pajak
+                    gajibersih = gajikotor - potongan
+                    data.append(gpk)
+                    data.append(TunjanganU[0])
+                    data.append(lemburan)
+                    data.append(gajikotor)
+                    data.append(asuransi)
+                    data.append(pajak)
+                    data.append(telat)
+                    data.append(potongan)
+                    data.append(gajibersih)
+                    listPekerja.append(data)
+                elif jbt == 2:
+                    c = float(input('Banyak cuti : '))
+                    if c <= 2:
+                        gpk = GajiPokokU[1]
+                    else:
+                        gpk = GajiPokokU[1] - (c-2)*GajiPokokU[1]/25
+                    try:
+                        l = int(input('Banyaknya jam lembur : '))
+                        lembur1 =l * lemburU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                        lembur2 = merah * lemburtglmrhU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        t = int(input('Banyaknya menit keterlambatan : '))
+                        telat = t * DendaKeterlambatanU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    lemburan =  lembur1 + lembur2
+                    gajikotor = gpk + TunjanganU[1] + lemburan
+                    asuransi = 0.02 * gpk
+                    pajak = PajakGajiPokokU * gpk
+                    potongan = telat + asuransi + pajak
+                    gajibersih = gajikotor - potongan
+                    data.append(gpk)
+                    data.append(TunjanganU[1])
+                    data.append(lemburan)
+                    data.append(gajikotor)
+                    data.append(asuransi)
+                    data.append(pajak)
+                    data.append(telat)
+                    data.append(potongan)
+                    data.append(gajibersih)
+                    listPekerja.append(data)
+                elif jbt == 3:
+                    c = float(input('Banyak cuti : '))
+                    if c <= 2:
+                        gpk = GajiPokokU[2]
+                    else:
+                        gpk = GajiPokokU[2] - (c-2)*GajiPokokU[2]/25
+                    try:
+                        l = int(input('Banyaknya jam lembur : '))
+                        lembur1 =l * lemburU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                        lembur2 = merah * lemburtglmrhU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        t = int(input('Banyaknya menit keterlambatan : '))
+                        telat = t * DendaKeterlambatanU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    lemburan =  lembur1 + lembur2
+                    gajikotor = gpk + TunjanganU[2] + lemburan
+                    asuransi = 0.02 * gpk
+                    pajak = PajakGajiPokokU * gpk
+                    potongan = telat + asuransi + pajak
+                    gajibersih = gajikotor - potongan
+                    data.append(gpk)
+                    data.append(TunjanganU[2])
+                    data.append(lemburan)
+                    data.append(gajikotor)
+                    data.append(asuransi)
+                    data.append(pajak)
+                    data.append(telat)
+                    data.append(potongan)
+                    data.append(gajibersih)
+                    listPekerja.append(data)
+                elif jbt == 4:
+                    c = float(input('Banyak cuti : '))
+                    if c <= 2:
+                        gpk = GajiPokokU[3]
+                    else:
+                        gpk = GajiPokokU[3] - (c-2)*GajiPokokU[3]/25
+                    try:
+                        l = int(input('Banyaknya jam lembur : '))
+                        lembur1 =l * lemburU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                        lembur2 = merah * lemburtglmrhU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        t = int(input('Banyaknya menit keterlambatan : '))
+                        telat = t * DendaKeterlambatanU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    lemburan =  lembur1 + lembur2
+                    gajikotor = gpk + Tunjangan[3] + lemburan
+                    asuransi = 0.02 * gpk
+                    pajak = PajakGajiPokokU * gpk
+                    potongan = telat + asuransi + pajak
+                    gajibersih = gajikotor - potongan
+                    data.append(gpk)
+                    data.append(TunjanganU[3])
+                    data.append(lemburan)
+                    data.append(gajikotor)
+                    data.append(asuransi)
+                    data.append(pajak)
+                    data.append(telat)
+                    data.append(potongan)
+                    data.append(gajibersih)
+                    listPekerja.append(data)
+                elif jbt == 5:
+                    c = float(input('Banyak cuti : '))
+                    if c <= 2:
+                        gpk = GajiPokokU[4]
+                    else:
+                        gpk = GajiPokokU[4] - (c-2)*GajiPokokU[4]/25          
+                    try:
+                        l = int(input('Banyaknya jam lembur : '))
+                        lembur1 = l * lembur
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        merah = int(input('Banyaknya masuk di tanggal merah atau hari Minggu : '))
+                        lembur2 = merah * lemburtglmrh
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    try:
+                        t = int(input('Banyaknya menit keterlambatan : '))
+                        telat = t * DendaKeterlambatanU
+                    except ValueError as ve:
+                        print(ve)
+                        time.sleep(1)
+                        break
+                    lemburan =  lembur1 + lembur2
+                    gajikotor = gpk + TunjanganU[4] + lemburan
+                    asuransi = 0.02 * gpk
+                    pajak = PajakGajiPokokU * gpk
+                    potongan = telat + asuransi + pajak
+                    gajibersih = gajikotor - potongan
+                    data.append(gpk)
+                    data.append(TunjanganU[4])
+                    data.append(lemburan)
+                    data.append(gajikotor)
+                    data.append(asuransi)
+                    data.append(pajak)
+                    data.append(telat)
+                    data.append(potongan)
+                    data.append(gajibersih)
+                    listPekerja.append(data)
+                else:
+                    print('data tidak terdeteksi')
+    
+                x = input('Ingin menambah data? (y/n) : ')
+                if x != 'y':
+                    Iterasi = False
+    
+            system('cls')
+            for gaji in listPekerja:
+                    print(gaji[0],'\t',gaji[1],'\t',gaji[2],'\t',gaji[3],'\t',gaji[4],'\t',gaji[5],
+                          '\t',gaji[6],'\t',gaji[7],'\t',gaji[8],'\t',gaji[9],'\t',gaji[10],'\t',gaji[11])
+    
+            print('Jumlah Karyawan : ', len(listPekerja)-1)
     
         def nuliskeCSV():
             namafile=input("Inputkan nama file (format : NAMAFILE.csv) : ")
@@ -303,160 +689,58 @@ while True:
                                         'Gaji Bersih':gaji[11]})
     
         
-    
-        print("===================PERTANYAAN PENDAHULUAN===================")
-        print('List jabatan')
-        for i in range(len(Jabatan)):
-            print(i+1, Jabatan[i])
-    
-        try:
-            gajipokok1 = int(input('Input gaji pokok bulanan Direktur : '))
-            GajiPokok.append(gajipokok1)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            gajipokok2 = int(input('Input gaji pokok bulanan Manager : '))
-            GajiPokok.append(gajipokok2)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            gajipokok3 = int(input('Input gaji pokok bulanan Supervisor : '))
-            GajiPokok.append(gajipokok3)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            gajipokok4 = int(input('Input gaji pokok bulanan Staff : '))
-            GajiPokok.append(gajipokok4)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            gajipokok5 = int(input('Input gaji pokok bulanan Janitor : '))
-            GajiPokok.append(gajipokok5)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            tunjangan1 = int(input('Input Tunjangan Direktur : '))
-            Tunjangan.append(tunjangan1)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            tunjangan2 = int(input('Input Tunjangan Manager : '))
-            Tunjangan.append(tunjangan2)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            tunjangan3 = int(input('Input Tunjangan Supervisor : '))
-            Tunjangan.append(tunjangan3)
-        except ValueError  as ve:
-            print(ValueError)
-            time.sleep(2)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            tunjangan4 = int(input('Input Tunjangan Staff : '))
-            Tunjangan.append(tunjangan4)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            tunjangan5 = int(input('Input Tunjangan Janitor : '))
-            Tunjangan.append(tunjangan5)
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            PajakGajiPokok = float(input('Inputkan pajak yang harus dibayar oleh setiap karyawan (dalam desimal kurang dari 1) : ')) #dari gaji pokok
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            DendaKeterlambatan = int(input('Inputkan denda keterlambatan yang harus dibayar oleh karyawan setiap keterlambatan 1 menit : '))
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            lembur = int(input('Input gaji lembur yang diterima karyawan per jamnya : '))
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-        try:
-            lemburtglmrh = int(input('Input gaji yang diterima karyawan setiap bekerja di tanggal merah : '))
-        except ValueError as ve:
-            print(ValueError)
-            exit()
-        except TypeError as te:
-            print(TypeError)
-            exit()
-    
+
         system('cls')
-        header()
-        proses()
-        while True:
-            tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
-            if tanya =='y':
-                nuliskeCSV()
-                print("BERHASIL !")
-                print("TERIMAKASIH")
-                print()
-                print("KEMBALI KE MENU AWAL.....")
-                time.sleep(2)
-                break
-            elif tanya =='n':
-                print("TERIMAKASIH")
-                print()
-                print("KEMBALI KE MENU AWAL.....")
-                time.sleep(2)
-                break
-            else:
-                print("INPUTAN TIDAK TERDETEKSI")
-                time.sleep(1)
-                system('cls')
-    elif a == 2:
+        if b == 'y':
+            headerU()
+            prosesU()
+            while True:
+                tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
+                if tanya =='y':
+                    nuliskeCSV()
+                    print("BERHASIL !")
+                    print("TERIMAKASIH")
+                    print()
+                    print("KEMBALI KE MENU AWAL.....")
+                    time.sleep(2)
+                    break
+                elif tanya =='n':
+                    print("TERIMAKASIH")
+                    print()
+                    print("KEMBALI KE MENU AWAL.....")
+                    time.sleep(2)
+                    break
+                else:
+                    print("INPUTAN TIDAK TERDETEKSI")
+                    time.sleep(1)
+                    system('cls')
+        elif b == 'n':
+            header()
+            proses()
+            while True:
+                tanya=input("Apakah anda ingin mengexport data ke file CSV? (y/n) : ")
+                if tanya =='y':
+                    nuliskeCSV()
+                    print("BERHASIL !")
+                    print("TERIMAKASIH")
+                    print()
+                    print("KEMBALI KE MENU AWAL.....")
+                    time.sleep(2)
+                    break
+                elif tanya =='n':
+                    print("TERIMAKASIH")
+                    print()
+                    print("KEMBALI KE MENU AWAL.....")
+                    time.sleep(2)
+                    break
+                else:
+                    print("INPUTAN TIDAK TERDETEKSI")
+                    time.sleep(1)
+                    system('cls')
+        else:
+            print('Inputan tidak terdeteksi')
+            
+    elif a == 3:
         print('==================PEMBUKAAN DATA GAJI==================')
         try:
             filename = input('Inputkan nama data dengan format NamaFile.csv : ')
@@ -476,7 +760,9 @@ while True:
             print('Sepertinya anda salah memasukkan format nama file')
             time.sleep(1)
             exit()
-    
+    elif a == 4:
+        print('Terimakasih')
+        exit()
     else:
         print('Menu tudak tersedia')
         break
