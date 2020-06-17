@@ -173,6 +173,11 @@ while True:
         except TypeError as te:
             print(TypeError)
             exit()
+        print("BERHASIL !")
+        print("TERIMAKASIH")
+        print()
+        print("KEMBALI KE MENU AWAL.....")
+        time.sleep(2)
     
     elif a == 2:
         def header():
@@ -690,6 +695,7 @@ while True:
         
 
         system('cls')
+        print('==================PENGHITUNGAN GAJI KARYAWAN==================')
         d = input('apakah anda telah mengupdate standar penggajian?(y/n)')
         if d == 'y':
             b = input('apakah anda ingin menggunakan standar penggajian yang sudah di update?(y/n) : ')
@@ -789,7 +795,11 @@ while True:
             exit()
     elif a == 4:
         print('Terimakasih')
+        print('MENUTUP PROGRAM...')
+        time.sleep(1)
         exit()
     else:
         print('Menu tudak tersedia')
+        print('MENUTUP PROGRAM...')
+        time.sleep(1)
         break
